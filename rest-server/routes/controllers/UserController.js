@@ -31,20 +31,7 @@ const UserController = {
       .catch( err => {
 
       });
-    // const user = new Users({
-    //   username: req.body.username, 
-    //   password: req.body.password
-    // });
 
-    // user.save()
-    //   .then( data => {
-    //     console.log('signup data:', data);
-    //     res.status(201).send('Success');
-    //   })
-    //   .catch( err => {
-    //     console.log('signup error:', err);
-    //     res.status(400).send('signup failed');
-    //   });
   },
 
   Login: (req, res) => {
@@ -61,13 +48,6 @@ const UserController = {
         } else {
           res.status(200).send('no user found');
         }
-        //   if (data[0].password === req.params.password) {
-        //     console.log('successful login ', data[0]);
-        //     res.status(202).send(data[0]._id);
-        //   }
-        //   res.status(200).send('incorrect password');
-        // }
-        // res.status(400).send('no user found!');
       })
       .catch( err => {
         console.log('login failed', err);
